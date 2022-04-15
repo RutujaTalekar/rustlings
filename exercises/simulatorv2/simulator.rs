@@ -5,15 +5,10 @@ enum IPAddrKind {
     V6(String),
 }
 
-enum MacAddrKind {
-    PHYSICAL(u64),
-    VIRTUAL(u32),
-}
-
 enum DeviceType {
     Desktop(IPAddrKind),
-    Switch(MacAddrKind),
-    Router(MacAddrKind),
+    Switch(IPAddrKind),
+    Router(IPAddrKind),
 }
 
 struct Device {
